@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import me from '../../assets/images/me.jpeg';
 import { Button } from '../../assets/UI/Button/Button';
 import FeaturedProducts from '../../components/Features/FeaturedProducts';
@@ -5,11 +6,19 @@ import { Features } from '../../components/Features/Features';
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/header';
 import { products } from '../../constants/products.const';
+import { useBasket } from '../../Provider/BasketProvider';
 import type { Product } from '../../types/product';
 import './Home.scss';
 
 export const Home = () => {
     const featuredProducts = products.filter((product: Product) => product.bestseller);
+    const { addToBasket } = useBasket();
+    const navigate = useNavigate();
+    
+    const handleAddToBasket = (product: Product) => {
+        console.log('Adding to basket:', product);
+        addToBasket(product);;
+    }
 
     return (
         <div className="home-page">
@@ -20,8 +29,8 @@ export const Home = () => {
                     <h1>Artisan Baking, <br />Crafted with Love</h1>
                     <p>Experience the finest pastries and breads in the city, using traditional techniques and organic ingredients.</p>
                     <div className="hero-actions">
-                        <Button text="Explore Menu" type="primary" className="explore-menu" onClick={() => { }} />
-                        <Button text="Our Story" type="secondary" className="our-story" onClick={() => { }} />
+                        <Button text="Explore Menu" type="primary" className="explore-menu" onClick={() => navigate('/products')} />
+                        <Button text="Our Story" type="secondary" className="our-story" onClick={() => navigate('/about')} />
                     </div>
                 </div>
                 <div className="hero-image">
@@ -38,7 +47,7 @@ export const Home = () => {
                     <h2>Our Signature Treats</h2>
                     <p>Hand-picked favorites from our master baker</p>
                 </div>
-                <FeaturedProducts products={featuredProducts} />
+                <FeaturedProducts products={featuredProducts} onAddToBasket={handleAddToBasket} />
 
             </section>
 

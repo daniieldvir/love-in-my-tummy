@@ -1,6 +1,8 @@
 import './Footer.scss';
 import { navItems } from '../../constants/navItems.const';
 import { socialMediaItems } from '../../constants/navItems.const';
+import { CopyrightFooter } from './CopyrightFooter';
+
 export const Footer = () => {
     return <footer className="footer">
         <div className="container">
@@ -26,10 +28,9 @@ export const Footer = () => {
                     <p>Saturday: Closed</p>
                 </div>
             </div>
-            <div className="footer-bottom">
-                <p>&copy; 2024 Love in my tummy. All rights reserved.</p>
-            </div>
+           
         </div>
+        <CopyrightFooter />
     </footer>
 };
 

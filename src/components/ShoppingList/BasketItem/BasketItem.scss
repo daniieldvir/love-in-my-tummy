@@ -1,0 +1,106 @@
+.basket-item {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    .item-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .item-details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .item-info {
+            h3 {
+                font-family: var(--font-body);
+                font-size: 1.05rem;
+                font-weight: 600;
+                margin-bottom: 4px;
+                color: var(--text-main);
+            }
+
+            .price-details {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .unit-price {
+                    color: var(--primary);
+                    font-weight: 600;
+                    font-size: 0.95rem;
+                }
+
+                .item-subtotal {
+                    font-size: 0.75rem;
+                    color: var(--text-muted);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .item-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+
+            .quantity-toggle {
+                display: flex;
+                align-items: center;
+                background: var(--bg-main);
+                padding: 4px;
+                border-radius: 8px;
+                gap: 12px;
+
+                .qty-btn {
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: var(--white);
+                    border-radius: 6px;
+                    color: var(--text-main);
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+                    &:hover {
+                        background: var(--primary-dark);
+                        color: var(--white);
+                    }
+                }
+
+                .qty-value {
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    min-width: 20px;
+                    text-align: center;
+                }
+            }
+
+            .remove-item {
+                color: #ff5252;
+                opacity: 0.6;
+                transition: opacity 0.3s;
+                padding: 5px;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

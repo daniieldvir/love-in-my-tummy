@@ -2,17 +2,26 @@ import { useState } from 'react';
 import FeaturedProducts from '../../components/Features/FeaturedProducts';
 import { Header } from '../../components/Header/header';
 import { products } from '../../constants/products.const';
+import { useBasket } from '../../Provider/BasketProvider';
+import type { Product } from '../../types/product';
 import './Products.scss';
+import { CopyrightFooter } from '../../components/Footer/CopyrightFooter';
 
 const CATEGORIES = ['All', ...Array.from(new Set(products.map(p => p.category)))];
 
 
 export const Products = () => {
     const [activeCategory, setActiveCategory] = useState('All');
+    const { addToBasket } = useBasket();
 
     const filteredProducts = activeCategory === 'All'
         ? products
         : products.filter(p => p.category === activeCategory);
+
+    const handleAddToBasket = (product: Product) => {
+        console.log('Adding to basket:', product);
+        addToBasket(product);;
+    }
 
     return (
         <div className="products-page">
@@ -38,13 +47,11 @@ export const Products = () => {
                     ))}
                 </div>
 
-                <FeaturedProducts products={filteredProducts} />
+                <FeaturedProducts products={filteredProducts} onAddToBasket={handleAddToBasket} />
 
             </section>
 
-            <footer className="simple-footer">
-                <p>&copy; 2024 Boulangerie Luxe • Handcrafted & Heartfelt</p>
-            </footer>
+         <CopyrightFooter />
         </div>
     );
 };

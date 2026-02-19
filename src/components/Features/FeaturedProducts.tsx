@@ -3,7 +3,12 @@ import { Button } from '../../assets/UI/Button/Button';
 import type { Product } from '../../types/product';
 import './FeaturedProducts.scss';
 
-const FeaturedProducts = ({ products }: { products: Product[] }) => {
+type Props = {
+    products: Product[];
+    onAddToBasket: (product: Product) => void;
+}
+
+const FeaturedProducts = ({ products, onAddToBasket }: Props) => {
     return <div className="products-grid">
         {products.map(product => (
             <div key={product.id} className="product-card animate-fade-in">
@@ -19,7 +24,7 @@ const FeaturedProducts = ({ products }: { products: Product[] }) => {
                     <p>{product.description}</p>
                     <div className="product-bottom">
                         <span className="price">{product.price}</span>
-                        <Button text="Add to Basket" type="add-to-basket" className="add-btn" onClick={() => { }} />
+                        <Button text="Add to Basket" type="add-to-basket" className="add-btn" onClick={() => onAddToBasket(product)} />
                     </div>
                 </div>
             </div>

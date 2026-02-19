@@ -1,6 +1,6 @@
 .footer {
     background: #fdfdfd;
-    padding: 80px 0 30px;
+    padding: 80px 0 0px;
     border-top: 1px solid #eee;
 
 
@@ -62,14 +62,7 @@
         }
     }
 
-    &-bottom {
-        border-top: 1px solid #eee;
-        padding-top: 30px;
-        text-align: center;
-        color: var(--text-muted);
-        font-size: 0.85rem;
-    }
-
+   
     @media (max-width: 768px) {
         &-content {
             display: flex;
