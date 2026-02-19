@@ -1,7 +1,6 @@
-import './Footer.scss';
-import { navItems } from '../../constants/navItems.const';
 import { socialMediaItems } from '../../constants/navItems.const';
 import { CopyrightFooter } from './CopyrightFooter';
+import './Footer.scss';
 
 export const Footer = () => {
     return <footer className="footer">
@@ -16,7 +15,7 @@ export const Footer = () => {
                     <ul>
                         {socialMediaItems.map((item) => (
                             <li key={item.label}>
-                                <a className="social-media-icon" href={item.href}>{item.icon}</a>
+                                <a className="social-media-icon" target="_blank" rel="noopener noreferrer">{item.icon}</a>
                             </li>
                         ))}
                     </ul>
@@ -28,10 +27,8 @@ export const Footer = () => {
                     <p>Saturday: Closed</p>
                 </div>
             </div>
-           
+
         </div>
         <CopyrightFooter />
     </footer>
 };
-
-export default Footer;

@@ -2,7 +2,7 @@ export interface Product {
     id: number;
     name: string;
     category: string;
-    price: string;
+    price: number;
     image: string;
     description: string;
     bestseller?: boolean;

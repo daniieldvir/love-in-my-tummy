@@ -1,9 +1,10 @@
 import { FaMinus, FaPlus, FaTrash } from 'react-icons/fa';
 import './BasketItem.scss';
 import type { Product } from '../../../types/product';
+import type { BasketItem as BasketItemType } from '../../../Provider/BasketProvider';
 
 interface BasketItemProps {
-    item: any;
+    item: BasketItemType;
     removeItem: (productId: number) => void;
     addToBasket: (product: Product) => void;
     onRemoveOne: (productId: number) => void;
@@ -20,7 +21,7 @@ export const BasketItem = ({ item, removeItem, addToBasket, onRemoveOne }: Baske
                     <span className="unit-price">{item.product.price}</span>
                     {item.quantity > 1 && (
                         <span className="item-subtotal">
-                            Subtotal: ${(parseFloat(item.product.price.replace('$', '')) * item.quantity).toFixed(2)}
+                            Subtotal: ${(item.product.price * item.quantity).toFixed(2)}
                         </span>
                     )}
                 </div>

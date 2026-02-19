@@ -1,5 +1,5 @@
 
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export const navItems = [
     {
@@ -23,17 +23,14 @@ export const navItems = [
 export const socialMediaItems = [
     {
         label: 'Facebook',
-        href: '',
         icon: <FaFacebook />
     },
     {
         label: 'Instagram',
-        href: '',
         icon: <FaInstagram />
     },
     {
         label: 'Whatsapp',
-        href: '',
         icon: <FaWhatsapp />
     }
 ]

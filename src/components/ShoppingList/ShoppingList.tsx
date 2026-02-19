@@ -15,9 +15,9 @@ export const ShoppingList = ({ isOpen, onClose }: ShoppingListProps) => {
     const navigate = useNavigate();
 
     const total = basket.reduce((acc, item) => {
-        const price = parseFloat(item.product.price.replace('$', ''));
-        return acc + (price * item.quantity);
+        return acc + (item.product.price * item.quantity); 
     }, 0);
+
 
     return createPortal(
         <>

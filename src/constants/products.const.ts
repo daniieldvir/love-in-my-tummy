@@ -22,7 +22,7 @@ export const products: Product[] = [
         id: 1,
         name: "Classic Sourdough",
         category: "Breads",
-        price: "$8.50",
+        price: 8.50,
         image: "https://images.unsplash.com/photo-1585478259715-876a6a81fc08?auto=format&fit=crop&q=80&w=600",
         description: "Naturally leavened for 24 hours for deep flavor."
     },
@@ -30,7 +30,7 @@ export const products: Product[] = [
         id: 2,
         name: "Almond Croissant",
         category: "Pastries",
-        price: "$5.50",
+        price: 5.50,
         image: almondPastry,
         description: "Double-baked with almond cream and sliced almonds."
     },
@@ -38,7 +38,7 @@ export const products: Product[] = [
         id: 3,
         name: "Raspberry pistachio pie",
         category: "Pies",
-        price: "$45.00",
+        price: 45.00,
         image: raspberryPistachioPie,
         description: "Delicious and crispy pie with raspberry filling and pistachio cream on top."
     },
@@ -46,7 +46,7 @@ export const products: Product[] = [
         id: 4,
         name: "Baguette Tradition",
         category: "Breads",
-        price: "$4.00",
+        price: 4.00,
         image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&q=80&w=600",
         description: "Crispy crust and airy crumb, the French way."
     },
@@ -55,7 +55,7 @@ export const products: Product[] = [
         name: "Macaroons",
         category: "Pastries",
         bestseller: true,
-        price: "$12.00",
+        price: 12.00,
         image: macaroons,
         description: "Box of 6 delicate macaroons with different flavors."
     },
@@ -63,7 +63,7 @@ export const products: Product[] = [
         id: 6,
         name: "Apple Cake",
         category: "Cakes",
-        price: "$30.00",
+        price: 30.00,
         image: appleCake,
         description: "Delicious and crispy cake with apple filling and chocolate on top."
     },
@@ -71,7 +71,7 @@ export const products: Product[] = [
         id: 7,
         name: "Chocolate Cake",
         category: "Cakes",
-        price: "$45.50",
+        price: 45.50,
         image: chocolateCake,
         description: "Delicious and crispy croissant with chocolate filling."
     },
@@ -80,7 +80,7 @@ export const products: Product[] = [
         name: "Lemon Pie with white chocolate",
         category: "Pies",
         bestseller: true,
-        price: "$30.00",
+        price: 30.00,
         image: lemonPieWithChocolate,
         description: "Delicious and crispy pie with lemon filling and white chocolate on top."
     }, 
@@ -88,7 +88,7 @@ export const products: Product[] = [
         id: 9,
         name: "Vanilla Cake",
         category: "Cakes",
-        price: "$45.50",
+        price: 45.50,
         image: vanillaCake,
         description: "Delicious and crispy croissant with vanilla filling."
     },
@@ -96,7 +96,7 @@ export const products: Product[] = [
         id: 10,
         name: "Birthday Cake",
         category: "Cakes",
-        price: "$50.00",
+        price: 50.00,
         image: birthdayCake,
         description: "3 layers of cracker cake with vanilla cream and cookie crumble topping."
     },
@@ -104,7 +104,7 @@ export const products: Product[] = [
         id: 11,
         name: "Cinnamon Cake",
         category: "Cakes",
-        price: "$35.50",
+        price: 35.50,
         image: cinnamonCake,
         description: "Cinnamon flavored cake with cinnamon cream and Cream cheese on top."
     },
@@ -112,7 +112,7 @@ export const products: Product[] = [
         id: 12,
         name: "Benitza",
         category: "Pastries",
-        price: "$35.50",
+        price: 35.50,
         image: benitza,
         description: "Filo pastry with royal cream and spinach"
     },
@@ -120,7 +120,7 @@ export const products: Product[] = [
         id: 13,
         name: "Almond pie",
         category: "Pies",
-        price: "$4.50",
+        price: 4.50,
         image: almondPie,
         description: "Delicious and crispy pie with almond filling and caramel on top."
     },
@@ -128,7 +128,7 @@ export const products: Product[] = [
         id: 14,
         name: "Chocolate croissant",
         category: "Pastries",
-        price: "$4.50",
+        price: 4.50,
         image: chocolateCroissant,
         description: "Delicious and crispy croissant with chocolate filling."
     },
@@ -137,7 +137,7 @@ export const products: Product[] = [
         name: "Garlic bread stuffed with cheese",
         category: "Breads",
         bestseller: true,
-        price: "$8.00",
+        price: 8.00,
         image: garlicBread,
         description: "Buttery, flakey, and baked fresh every morning."
     },
@@ -145,7 +145,7 @@ export const products: Product[] = [
         id: 16,
         name: "Spinach cheese pastry",
         category: "Pastries",
-        price: "$4.50",
+        price: 4.50,
         image: spinachCheesePastry,
         description: "Delicious and crispy pastry with spinach filling and cheese on top."
     },
@@ -153,7 +153,7 @@ export const products: Product[] = [
         id: 17,
         name: "Coconut cake with chocolate",
         category: "Cakes",
-        price: "$45.50",
+        price: 45.50,
         image: coconutCakeWithChocolate,
         description: "Delicious and crispy cake with coconut filling and chocolate on top."
     },  
@@ -161,7 +161,7 @@ export const products: Product[] = [
         id: 18,
         name: "Cheese and sweet potato pastry",
         category: "Pastries",
-        price: "$45.50",
+        price: 45.50,
         image: cheeseSweetPotatoPastry,
         description: "Delicious and crispy pastry with cheese and sweet potato filling and cream cheese on top."
     },

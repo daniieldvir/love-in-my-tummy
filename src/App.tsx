@@ -3,10 +3,12 @@ import { Home } from './pages/Home/Home';
 import { Products } from './pages/Products/Products';
 import { Checkout } from './pages/Checkout/Checkout';
 import { BasketProvider } from './Provider/BasketProvider';
+import { Header } from './components/Header/Header';
 
 const App: React.FC = () => {
   return (
     <BasketProvider>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
@@ -15,5 +17,6 @@ const App: React.FC = () => {
     </BasketProvider>
   );
 };
+
 
 export default App

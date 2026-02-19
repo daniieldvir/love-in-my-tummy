@@ -26,7 +26,7 @@ export const BasketProvider = ({ children }: { children: ReactNode }) => {
             const parsed = JSON.parse(saved);
             // Simple migration check: if the first item has 'price' but no 'product' property, it's the old format
             if (Array.isArray(parsed) && parsed.length > 0 && parsed[0].price && !parsed[0].product) {
-                return parsed.map((p: any) => ({ product: p, quantity: 1 }));
+                return parsed.map((p: Product) => ({ product: p, quantity: 1 }));
             }
             return parsed;
         } catch (e) {
@@ -38,6 +38,7 @@ export const BasketProvider = ({ children }: { children: ReactNode }) => {
     useEffect(() => {
         localStorage.setItem(BASKET_STORAGE_KEY, JSON.stringify(basket));
     }, [basket]);
+
 
     const addToBasket = (product: Product) => {
         setBasket(prev => {

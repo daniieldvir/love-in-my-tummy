@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FaCheckCircle, } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
@@ -13,34 +13,29 @@ export const Checkout = () => {
     const [customerInfo, setCustomerInfo] = useState({ name: '', email: '', phone: '' });
     const [shippingInfo, setShippingInfo] = useState({ address: '', city: '', postalCode: '', notes: '' });
     const [isOrdered, setIsOrdered] = useState(false);
-    const [canSubmit, setCanSubmit] = useState(false);
-
 
     const subtotal = basket.reduce((acc, item) => {
-        const price = parseFloat(item.product.price.replace('$', ''));
-        return acc + (price * item.quantity);
+        return acc + (item.product.price * item.quantity);
     }, 0);
 
     const shipping = 5.00;
     const total = subtotal + shipping;
 
+    const canSubmit =
+        !!customerInfo.name &&
+        !!customerInfo.email &&
+        !!customerInfo.phone &&
+        !!shippingInfo.address &&
+        !!shippingInfo.city;
 
-    useEffect(() => {
-        setCanSubmit(
-          !!customerInfo.name &&
-          !!customerInfo.email &&
-          !!customerInfo.phone &&
-          !!shippingInfo.address &&
-          !!shippingInfo.city
-        );
-      }, [customerInfo, shippingInfo]);
 
-      const handlePlaceOrder = (e: React.FormEvent) => {
+    const handlePlaceOrder = (e: React.FormEvent) => {
         e.preventDefault();
-        if (!canSubmit) return; 
+
+        if (!canSubmit) return;
         setIsOrdered(true);
         clearBasket();
-      };
+    };
 
 
     if (basket.length === 0 && !isOrdered) {

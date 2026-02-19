@@ -38,6 +38,7 @@
                 font-size: 1.5rem;
                 color: var(--primary-dark);
                 transition: color 0.3s ease;
+                cursor: pointer;
 
                 &:hover {
                     color: var(--primary);
@@ -62,7 +63,7 @@
         }
     }
 
-   
+
     @media (max-width: 768px) {
         &-content {
             display: flex;

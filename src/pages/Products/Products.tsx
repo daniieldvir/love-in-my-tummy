@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import FeaturedProducts from '../../components/Features/FeaturedProducts';
-import { Header } from '../../components/Header/header';
-import { products } from '../../constants/products.const';
-import { useBasket } from '../../Provider/BasketProvider';
-import type { Product } from '../../types/product';
-import './Products.scss';
 import { CopyrightFooter } from '../../components/Footer/CopyrightFooter';
+import { products } from '../../constants/products.const.ts';
+import { useBasket } from '../../Provider/BasketProvider';
+import './Products.scss';
 
 const CATEGORIES = ['All', ...Array.from(new Set(products.map(p => p.category)))];
 
@@ -18,15 +16,8 @@ export const Products = () => {
         ? products
         : products.filter(p => p.category === activeCategory);
 
-    const handleAddToBasket = (product: Product) => {
-        console.log('Adding to basket:', product);
-        addToBasket(product);;
-    }
-
     return (
         <div className="products-page">
-            <Header />
-
             <section className="products-hero">
                 <div className="container">
                     <h1 className="animate-fade-in">Our Collection</h1>
@@ -47,11 +38,11 @@ export const Products = () => {
                     ))}
                 </div>
 
-                <FeaturedProducts products={filteredProducts} onAddToBasket={handleAddToBasket} />
+                <FeaturedProducts products={filteredProducts} onAddToBasket={(product) => addToBasket(product)} />
 
             </section>
 
-         <CopyrightFooter />
+            <CopyrightFooter />
         </div>
     );
 };

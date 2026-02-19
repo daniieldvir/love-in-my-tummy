@@ -1,5 +1,6 @@
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FaTruck, FaUser } from "react-icons/fa";
+import type { BasketItem as BasketItemType } from '../../Provider/BasketProvider';
 import './Checkout.scss';
 
 type InputFieldProps = {
@@ -109,11 +110,18 @@ export const ShippingInfoForm = ({ data, setData }: ShippingInfoFormProps) => (
     </div>
 );
 
-
-export const OrderSummary = ({ basket, subtotal, shipping, total, handlePlaceOrder, isFormValid }: any) => (
+type OrderSummaryProps = {
+    basket: BasketItemType[];
+    subtotal: number;
+    shipping: number;
+    total: number;
+    isFormValid: boolean;
+    handlePlaceOrder: (e: React.FormEvent) => void;
+}
+export const OrderSummary = ({ basket, subtotal, shipping, total, isFormValid, handlePlaceOrder }: OrderSummaryProps) => (
     <div className="order-summary-card">
         <h3>Order Summary</h3>
-        {basket.map((item: any) => (
+        {basket.map((item: BasketItemType) => (
             <div key={item.product.id} className="summary-item">
                 <img src={item.product.image} alt={item.product.name} className="item-img" />
                 <div className="item-info">
@@ -121,7 +129,7 @@ export const OrderSummary = ({ basket, subtotal, shipping, total, handlePlaceOrd
                     <p>Quantity: {item.quantity}</p>
                 </div>
                 <div className="item-price">
-                    ${(parseFloat(item.product.price.replace('$', '')) * item.quantity).toFixed(2)}
+                    ${(item.product.price * item.quantity).toFixed(2)}
                 </div>
             </div>
         ))}
@@ -130,6 +138,6 @@ export const OrderSummary = ({ basket, subtotal, shipping, total, handlePlaceOrd
             <div className="total-row"><span>Shipping</span><span>${shipping.toFixed(2)}</span></div>
             <div className="total-row grand-total"><span>Total</span><span>${total.toFixed(2)}</span></div>
         </div>
-        <button className="place-order-btn" onClick={handlePlaceOrder} disabled={!isFormValid}>Complete Order</button>
+        <button className="place-order-btn" type="submit" onClick={handlePlaceOrder} disabled={!isFormValid}>Complete Order</button>
     </div>
 );
