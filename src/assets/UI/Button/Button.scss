@@ -1,0 +1,56 @@
+.button.primary {
+    background: var(--primary-light);
+    color: var(--text-main);
+    border: 2px solid var(--primary-button-border, transparent);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 500;
+    width:var(--primary-button-width, auto);
+
+    &:hover {
+        background: var(--primary-dark);
+        color: var(--white);
+        transform: translateY(-2px);
+    }
+}
+
+.button.secondary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 500;
+    width:var(--secondary-button-width, auto);
+
+    &:hover {
+        background: rgba(141, 110, 99, 0.05);
+        transform: translateY(-2px);
+    }
+}
+
+.button.tertiary {
+    background: var(--primary-light);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+
+    &:hover {
+        background: var(--primary);
+    }
+}
+
+.button.add-to-basket {
+    background: var(--text-main);
+    color: var(--white);
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+
+    &:hover {
+        background: var(--primary);
+        transform: scale(1.05);
+    }
+}
+

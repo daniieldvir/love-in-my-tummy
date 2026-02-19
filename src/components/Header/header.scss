@@ -1,0 +1,86 @@
+@use "../../index" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: all 0.3s ease;
+
+    &-logo {
+        height: 100px;
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+    }
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        ul {
+            display: flex;
+            gap: 40px;
+
+            li {
+                a {
+                    font-weight: 500;
+                    font-size: 0.95rem;
+                    color: var(--text-muted);
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        background: var(--grad-primary);
+                        transition: width 0.3s ease;
+                    }
+
+                    &:hover {
+                        color: var(--text-main);
+
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+        height: 70px;
+
+        &-nav {
+            display: none;
+            /* Add mobile menu later if needed */
+        }
+    }
+}
