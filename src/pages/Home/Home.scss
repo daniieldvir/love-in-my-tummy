@@ -1,24 +1,24 @@
 .home-page {
-    padding-top: 80px;
+  padding-top: 80px;
 
-    .container {
-        margin-top: 70px;
+  .container {
+    margin-top: 70px;
+  }
+
+  .featured-products {
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+      }
     }
-
-    .featured-products {
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-
-            h2 {
-                font-size: 3rem;
-                margin-bottom: 15px;
-            }
-
-            p {
-                color: var(--text-muted);
-                font-size: 1.1rem;
-            }
-        }
-    }
+  }
 }

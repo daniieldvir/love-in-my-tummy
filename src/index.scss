@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap");
 
 :root {
   /* Color Palette - Elegant Bakery */
@@ -12,12 +12,12 @@
   --text-main: #3e2723;
   --text-muted: #795548;
   --white: #ffffff;
-  
+
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.3);
   --glass-shadow: 0 8px 32px 0 rgba(141, 110, 99, 0.15);
-  
+
   /* Gradints */
   --grad-primary: linear-gradient(135deg, #8d6e63 0%, #be9c91 100%);
   --grad-warm: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
@@ -27,9 +27,9 @@
   --container-max-width: 1200px;
 
   /* Typography */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Outfit', sans-serif;
-  
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Outfit", sans-serif;
+
   font-family: var(--font-body);
   line-height: 1.6;
   font-weight: 400;
@@ -64,7 +64,10 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   line-height: 1.2;
 }
@@ -95,7 +98,7 @@ button {
   font-weight: 500;
   box-shadow: 0 4px 15px rgba(141, 110, 99, 0.3);
   display: inline-block;
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(141, 110, 99, 0.4);
@@ -104,8 +107,14 @@ button {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {

@@ -1,11 +1,11 @@
-import { Route, Routes } from 'react-router-dom';
-import { MainLayout } from './layouts/MainLayout';
-import { About } from './pages/About/About';
-import { Checkout } from './pages/Checkout/Checkout';
-import { Contact } from './pages/Contact/Contact';
-import { Home } from './pages/Home/Home';
-import { Products } from './pages/Products/Products';
-import { BasketProvider } from './Provider/BasketProvider';
+import { Route, Routes } from "react-router-dom";
+import { MainLayout } from "./layouts/MainLayout";
+import { About } from "./pages/About/About";
+import { Checkout } from "./pages/Checkout/Checkout";
+import { Contact } from "./pages/Contact/Contact";
+import { Home } from "./pages/Home/Home";
+import { Products } from "./pages/Products/Products";
+import { BasketProvider } from "./Provider/BasketProvider";
 
 const App: React.FC = () => {
   return (
@@ -23,5 +23,4 @@ const App: React.FC = () => {
   );
 };
 
-
-export default App
+export default App;

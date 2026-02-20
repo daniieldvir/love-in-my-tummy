@@ -1,33 +1,32 @@
 .cta-banner {
-    background: var(--grad-primary);
-    padding: 100px 5%;
-    text-align: center;
+  background: var(--grad-primary);
+  padding: 100px 5%;
+  text-align: center;
 
-    .container {
-        max-width: 640px;
-        margin: 0 auto;
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
 
-        h2 {
-            font-family: var(--font-heading);
-            font-size: 3rem;
-            color: var(--white);
-            margin-bottom: 18px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.82);
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--white);
+      margin-bottom: 18px;
     }
 
-    @media (max-width: 768px) {
-        padding: 70px 5%;
-
-        .container h2 {
-            font-size: 2.2rem;
-        }
+    p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 40px;
+      line-height: 1.7;
     }
+  }
+
+  @media (max-width: 768px) {
+    padding: 70px 5%;
+
+    .container h2 {
+      font-size: 2.2rem;
+    }
+  }
 }

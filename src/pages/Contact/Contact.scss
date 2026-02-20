@@ -1,35 +1,35 @@
 @use "../../index" as *;
 
 .contact-page {
-    padding-top: 100px;
-    background-color: var(--bg-main);
-    min-height: 100vh;
+  padding-top: 100px;
+  background-color: var(--bg-main);
+  min-height: 100vh;
 
-    .container {
-        padding-top: 120px;
+  .container {
+    padding-top: 120px;
 
-        @media (max-width: 968px) {
-            padding-top: 50px;
-        }
+    @media (max-width: 968px) {
+      padding-top: 50px;
     }
+  }
 }
 
 .contact-main {
-    padding: 20px 5% 100px;
+  padding: 20px 5% 100px;
 
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    align-items: flex-start;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+  }
+
+  @media (max-width: 968px) {
     .contact-grid {
-        display: grid;
-        grid-template-columns: 1.4fr 1fr;
-        gap: 60px;
-        align-items: flex-start;
-        max-width: var(--container-max-width);
-        margin: 0 auto;
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
-
-    @media (max-width: 968px) {
-        .contact-grid {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-    }
+  }
 }
