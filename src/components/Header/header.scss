@@ -183,6 +183,11 @@
                         width: 100%;
                     }
                 }
+
+                &.active {
+                    color: var(--text-main);
+                    font-weight: 600;
+                }
             }
         }
     }

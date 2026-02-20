@@ -1,0 +1,38 @@
+ .form-group {
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+
+     label {
+         font-size: 0.9rem;
+         font-weight: 600;
+         color: var(--text-main);
+     }
+
+
+     select {
+         padding: 13px 16px;
+         border: 1.5px solid #e8e0dc;
+         border-radius: 12px;
+         font-family: inherit;
+         font-size: 0.95rem;
+         color: var(--text-main);
+         background: #faf8f7;
+         transition: all 0.25s ease;
+
+         &::placeholder {
+             color: #bbb0aa;
+         }
+
+         &:focus {
+             outline: none;
+             border-color: var(--primary);
+             background: var(--white);
+             box-shadow: 0 0 0 4px rgba(141, 110, 99, 0.1);
+         }
+     }
+
+     select {
+         cursor: pointer;
+     }
+ }

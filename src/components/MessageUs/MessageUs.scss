@@ -1,0 +1,99 @@
+.contact-form-wrap {
+    background: var(--white);
+    padding: 45px;
+    border-radius: 28px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--glass-border);
+
+    .form-success {
+        text-align: center;
+        padding: 40px 20px;
+        animation: fadeIn 0.5s ease forwards;
+
+
+
+        h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+    }
+
+    .contact-form {
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .form-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 480px) {
+            padding: 28px 22px;
+
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+
+            .form-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+
+                @media (max-width: 560px) {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+        .submit-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--grad-primary);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(141, 110, 99, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            align-self: flex-start;
+            margin-top: 8px;
+            --primary-button-width: 100%;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(141, 110, 99, 0.4);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+
+            @media (max-width: 480px) {
+                width: 100%;
+            }
+        }
+    }
+}

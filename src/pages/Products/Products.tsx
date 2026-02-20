@@ -41,8 +41,6 @@ export const Products = () => {
                 <FeaturedProducts products={filteredProducts} onAddToBasket={(product) => addToBasket(product)} />
 
             </section>
-
-            <CopyrightFooter />
         </div>
     );
 };

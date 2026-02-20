@@ -1,0 +1,95 @@
+.our-journey {
+    padding: var(--section-padding);
+    background: var(--bg-main);
+
+    .journey-header {
+        margin-bottom: 60px;
+
+        h2 {
+            font-size: 3rem;
+            color: var(--text-main);
+        }
+    }
+
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        max-width: 860px;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 90px 40px 1fr;
+        gap: 0 30px;
+        align-items: flex-start;
+        min-height: 120px;
+
+        .timeline-year {
+            text-align: right;
+            padding-top: 2px;
+
+            span {
+                font-family: var(--font-heading);
+                font-size: 1.05rem;
+                font-weight: 700;
+                color: var(--primary);
+                white-space: nowrap;
+            }
+        }
+
+        .timeline-connector {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 4px;
+
+            .connector-dot {
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                background: var(--grad-primary);
+                flex-shrink: 0;
+                box-shadow: 0 0 0 4px rgba(141, 110, 99, 0.15);
+            }
+
+            .connector-line {
+                flex: 1;
+                width: 2px;
+                background: linear-gradient(to bottom, var(--primary-light), transparent);
+                margin-top: 8px;
+                min-height: 70px;
+            }
+        }
+
+        .timeline-content {
+            padding-bottom: 50px;
+
+            h3 {
+                font-size: 1.25rem;
+                color: var(--text-main);
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: var(--text-muted);
+                font-size: 0.97rem;
+                line-height: 1.8;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .journey-header h2 {
+            font-size: 2.2rem;
+        }
+
+        .timeline-item {
+            grid-template-columns: 60px 30px 1fr;
+            gap: 0 16px;
+
+            .timeline-year span {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

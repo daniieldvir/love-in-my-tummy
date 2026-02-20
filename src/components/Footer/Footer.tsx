@@ -1,4 +1,5 @@
 import { socialMediaItems } from '../../constants/navItems.const';
+import { openingHours } from '../../constants/storeInfo.tsx';
 import { CopyrightFooter } from './CopyrightFooter';
 import './Footer.scss';
 
@@ -10,6 +11,13 @@ export const Footer = () => {
                     <h3>Love in my tummy</h3>
                     <p>Authentic taste, artisanal soul. We are a team of passionate bakers who are dedicated to creating the best bread and pastries in the city.</p>
                 </div>
+
+                <div className="footer-contact">
+                    <h4>Hours</h4>
+                    {openingHours.map((hour) => (
+                        <p key={hour}>{hour}</p>
+                    ))}
+                </div>
                 <div className="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
@@ -20,12 +28,7 @@ export const Footer = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="footer-contact">
-                    <h4>Hours</h4>
-                    <p>Sun - Thu: 8am - 8pm</p>
-                    <p>Friday: 8am - 14pm</p>
-                    <p>Saturday: Closed</p>
-                </div>
+
             </div>
 
         </div>

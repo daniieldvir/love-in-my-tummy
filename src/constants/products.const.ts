@@ -14,7 +14,11 @@ import spinachCheesePastry from '../assets/images/spinach_cheese_pastry.jpeg';
 import coconutCakeWithChocolate from '../assets/images/coconut_cake_with_chocolate.jpeg';
 import cheeseSweetPotatoPastry from '../assets/images/cheese_sweet_potato.jpeg';
 import almondPastry from '../assets/images/almond_pastry.jpeg';
+import saintHonore from '../assets/images/saint_honore.jpeg';   
+import classicSourdough from '../assets/images/classic_sourdough.jpeg';
+import challahWithCheeseAndHerbs from '../assets/images/challah_cheese_herbs.jpeg';
 import type { Product } from '../types/product';
+
 
 
 export const products: Product[] = [
@@ -23,7 +27,7 @@ export const products: Product[] = [
         name: "Classic Sourdough",
         category: "Breads",
         price: 8.50,
-        image: "https://images.unsplash.com/photo-1585478259715-876a6a81fc08?auto=format&fit=crop&q=80&w=600",
+        image: classicSourdough,
         description: "Naturally leavened for 24 hours for deep flavor."
     },
     {
@@ -44,11 +48,11 @@ export const products: Product[] = [
     },
     {
         id: 4,
-        name: "Baguette Tradition",
+        name: "Challah with cheese and herbs",
         category: "Breads",
-        price: 4.00,
-        image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&q=80&w=600",
-        description: "Crispy crust and airy crumb, the French way."
+        price: 8.00,
+        image: challahWithCheeseAndHerbs,
+        description: "A traditional Jewish bread made with cheese and herbs."
     },
     {
         id: 5,
@@ -80,7 +84,7 @@ export const products: Product[] = [
         name: "Lemon Pie with white chocolate",
         category: "Pies",
         bestseller: true,
-        price: 30.00,
+        price: 35.00,
         image: lemonPieWithChocolate,
         description: "Delicious and crispy pie with lemon filling and white chocolate on top."
     }, 
@@ -120,7 +124,7 @@ export const products: Product[] = [
         id: 13,
         name: "Almond pie",
         category: "Pies",
-        price: 4.50,
+        price: 34.50,
         image: almondPie,
         description: "Delicious and crispy pie with almond filling and caramel on top."
     },
@@ -137,7 +141,7 @@ export const products: Product[] = [
         name: "Garlic bread stuffed with cheese",
         category: "Breads",
         bestseller: true,
-        price: 8.00,
+        price: 28.00,
         image: garlicBread,
         description: "Buttery, flakey, and baked fresh every morning."
     },
@@ -145,7 +149,7 @@ export const products: Product[] = [
         id: 16,
         name: "Spinach cheese pastry",
         category: "Pastries",
-        price: 4.50,
+        price: 34.50,
         image: spinachCheesePastry,
         description: "Delicious and crispy pastry with spinach filling and cheese on top."
     },
@@ -164,5 +168,13 @@ export const products: Product[] = [
         price: 45.50,
         image: cheeseSweetPotatoPastry,
         description: "Delicious and crispy pastry with cheese and sweet potato filling and cream cheese on top."
+    },  
+    {
+        id: 19,
+        name: "Saint Honore",
+        category: "Pastries",
+        price: 34.50,
+        image: saintHonore,
+        description: "A circular puff pastry base topped with caramel-glazed choux puffs, filled with cream and finished with whipped cream."
     },
 ];

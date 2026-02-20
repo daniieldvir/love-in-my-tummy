@@ -1,10 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import me from '../../assets/images/me.jpeg';
 import FeaturedProducts from '../../components/Features/FeaturedProducts';
-import { Features } from '../../components/Features/Features';
-import { Footer } from '../../components/Footer/Footer';
+import { Hero } from '../../components/Hero/Hero';
 import { Button } from '../../components/UI/Button/Button';
+import { CtaBanner } from '../../components/UI/CtaBanner/CtaBanner';
+import { InfoCards } from '../../components/UI/InfoCards/InfoCards';
 import { products } from '../../constants/products.const';
+import { features } from '../../constants/storeInfo.tsx';
 import { useBasket } from '../../Provider/BasketProvider';
 import type { Product } from '../../types/product';
 import './Home.scss';
@@ -17,43 +19,31 @@ export const Home = () => {
 
     return (
         <div className="home-page">
-            <section className="hero">
-                <div className="hero-content animate-fade-in">
-                    <span className="hero-tagline">Since 2021</span>
-                    <h1>Artisan Baking, <br />Crafted with Love</h1>
-                    <p>Experience the finest pastries and breads in the city, using traditional techniques and organic ingredients.</p>
-                    <div className="hero-actions">
-                        <Button text="Explore Menu" type="primary" className="explore-menu" onClick={() => navigate('/products')} />
-                        <Button text="Our Story" type="secondary" className="our-story" onClick={() => navigate('/about')} />
-                    </div>
-                </div>
-                <div className="hero-image">
-                    <img src={me} alt="chef" />
-                </div>
-            </section>
+            <Hero
+                variant="split"
+                tagline="Since 2021"
+                title={<> Artisan Baking, <br />Crafted with Love</>}
+                description="Experience the finest pastries and breads in the city, using traditional techniques and organic ingredients."
+                image={me}
+                actions={
+                    <>
+                        <Button text="Explore Menu" type="button" designType="primary" onClick={() => navigate('/products')} />
+                        <Button text="Our Story" type="button" designType="secondary" onClick={() => navigate('/about')} />
+                    </>
+                }
+            />
 
-            <section className="container">
-                <Features />
-            </section>
+            <InfoCards className="container" infoCards={features} variant="simple-icon" />
 
-            <section className="featured-products container">
+            <section className="featured-products">
                 <div className="section-header">
                     <h2>Our Signature Treats</h2>
                     <p>Hand-picked favorites from our master baker</p>
                 </div>
                 <FeaturedProducts products={featuredProducts} onAddToBasket={(product) => addToBasket(product)} />
-
             </section>
-
-            <section className="cta-banner">
-                <div className="container animate-fade-in">
-                    <h2>Visit Us Today</h2>
-                    <p>Smell the fresh aroma of baking bread and enjoy a warm cup of coffee.</p>
-                    <Button text="Get Directions" type="primary" className="get-directions" onClick={() => { }} />
-                </div>
-            </section>
-
-            <Footer />
+            <CtaBanner title="Visit Us Today" description="Smell the fresh aroma of baking bread and enjoy a warm cup of coffee."
+                buttonText="Get Directions" buttonLink="/contact" />
         </div>
     );
 };

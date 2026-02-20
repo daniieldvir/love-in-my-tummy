@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { FaCheckCircle, } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
+import { SuccessIcon } from '../../components/UI/SuccessIcon/SuccessIcon';
 import { useBasket } from '../../Provider/BasketProvider';
 import './Checkout.scss';
 import { CustomerInfoForm, OrderSummary, ShippingInfoForm } from './CheckoutSections';
@@ -41,9 +41,6 @@ export const Checkout = () => {
     if (basket.length === 0 && !isOrdered) {
         return (
             <div className="checkout-success">
-                <div className="success-icon" style={{ background: '#fff3e0', color: '#ff9800' }}>
-                    🛒
-                </div>
                 <h1>Your basket is empty</h1>
                 <p>Add some delicious treats before checking out!</p>
                 <Link to="/products" className="back-home-btn">Go to Shop</Link>
@@ -54,9 +51,7 @@ export const Checkout = () => {
     if (isOrdered) {
         return (
             <div className="checkout-success">
-                <div className="success-icon">
-                    <FaCheckCircle />
-                </div>
+                <SuccessIcon backgroundColor="#e8f5e9" color="#4caf50" />
                 <h1>Order Placed!</h1>
                 <p>Thank you for placing your order! We will contact you by phone to confirm the details before processing it</p>
                 <Link to="/" className="back-home-btn">Back to Home</Link>

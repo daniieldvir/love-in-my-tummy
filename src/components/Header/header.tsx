@@ -1,22 +1,28 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
 import { navItems } from '../../constants/navItems.const';
 import { ShoppingList } from '../ShoppingList/ShoppingList';
 import { ShoppingCartButton } from '../UI/ShoppingCartButton/ShoppingCartButton';
 import './header.scss';
-import { Link } from 'react-router-dom';
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isShoppingListOpen, setIsShoppingListOpen] = useState(false);
 
+
     const navLinks = (closeMenu: boolean) => (
         <ul>
             {navItems.map((item) => (
                 <li key={item.label}>
-                    <Link className="nav-link" to={item.href} onClick={() => closeMenu && setIsMenuOpen(false)}>{item.label}</Link>
+                    <NavLink
+                        to={item.href}
+                        className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
+                        onClick={() => closeMenu && setIsMenuOpen(false)}>
+                        {item.label}
+                    </NavLink>
                 </li>
             ))}
         </ul>

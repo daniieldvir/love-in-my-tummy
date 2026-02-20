@@ -20,7 +20,7 @@ const FeaturedProducts = ({ products, onAddToBasket }: Props) => {
                     <p>{product.description}</p>
                     <div className="product-bottom">
                         <span className="price"> $ {product.price.toFixed(2)}</span>
-                        <Button text="Add to Basket" type="add-to-basket" className="add-btn" onClick={() => onAddToBasket(product)} />
+                        <Button text="Add to Basket" type="button" designType="add-to-basket" onClick={() => onAddToBasket(product)} />
                     </div>
                 </div>
             </div>

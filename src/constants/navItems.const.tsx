@@ -1,7 +1,8 @@
 
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import type { NavItem, SocialMediaItem } from "../types/variance";
 
-export const navItems = [
+export const navItems: NavItem[] = [
     {
         label: 'Home',
         href: '/'
@@ -20,7 +21,8 @@ export const navItems = [
     }
 ]
 
-export const socialMediaItems = [
+
+export const socialMediaItems: SocialMediaItem[] = [
     {
         label: 'Facebook',
         icon: <FaFacebook />

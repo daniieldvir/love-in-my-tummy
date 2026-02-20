@@ -1,27 +1,8 @@
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FaTruck, FaUser } from "react-icons/fa";
+import { InputField, TextareaField } from "../../components/FormSections/FormSections";
 import type { BasketItem as BasketItemType } from '../../Provider/BasketProvider';
 import './Checkout.scss';
-
-type InputFieldProps = {
-    placeholder: string;
-    type?: string;
-    required?: boolean;
-    value: string;
-    onChange: (value: string) => void;
-}
-export const InputField = ({ placeholder, type = 'text', required = false, value, onChange }: InputFieldProps) => (
-    <div className="form-group">
-        <input
-            className="form-control"
-            type={type}
-            placeholder={placeholder}
-            required={required}
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-        />
-    </div>
-);
 
 
 type CustomerInfoFormProps = {
@@ -100,12 +81,12 @@ export const ShippingInfoForm = ({ data, setData }: ShippingInfoFormProps) => (
             />
         </div>
         <div className="form-group">
-            <textarea
-                rows={3}
+            <TextareaField
                 placeholder="Delivery Notes (Optional)"
                 value={data.notes}
-                onChange={(e) => setData({ ...data, notes: e.target.value })}
-            ></textarea>
+                onChange={(v: string) => setData({ ...data, notes: v })}
+                required
+            />
         </div>
     </div>
 );
@@ -118,6 +99,7 @@ type OrderSummaryProps = {
     isFormValid: boolean;
     handlePlaceOrder: (e: React.FormEvent) => void;
 }
+
 export const OrderSummary = ({ basket, subtotal, shipping, total, isFormValid, handlePlaceOrder }: OrderSummaryProps) => (
     <div className="order-summary-card">
         <h3>Order Summary</h3>

@@ -1,0 +1,59 @@
+.about-philosophy {
+    padding: var(--section-padding);
+    background: var(--white);
+
+    .philosophy-grid {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 0 40px;
+        row-gap: 0;
+        max-width: 860px;
+
+        .philosophy-number {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            line-height: 1;
+            padding-top: 8px;
+            align-self: flex-start;
+        }
+
+        .philosophy-body {
+            padding: 8px 0 50px;
+            border-bottom: 1px solid #f0e8e4;
+            margin-bottom: 50px;
+
+            h3 {
+                font-size: 1.4rem;
+                color: var(--primary-dark);
+                margin-bottom: 12px;
+            }
+
+            p {
+                color: var(--text-muted);
+                font-size: 1rem;
+                line-height: 1.8;
+                max-width: 600px;
+            }
+        }
+
+        /* Remove border from last item */
+        .philosophy-number:last-of-type+.philosophy-body,
+        .philosophy-body:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .philosophy-grid {
+            grid-template-columns: 55px 1fr;
+            gap: 0 20px;
+
+            .philosophy-number {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
