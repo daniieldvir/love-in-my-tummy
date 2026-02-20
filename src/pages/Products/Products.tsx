@@ -1,6 +1,5 @@
 import { useState } from "react";
 import FeaturedProducts from "../../components/Features/FeaturedProducts";
-import { CopyrightFooter } from "../../components/Footer/CopyrightFooter";
 import { products } from "../../constants/products.const.ts";
 import { useBasket } from "../../Provider/BasketProvider";
 import "./Products.scss";
