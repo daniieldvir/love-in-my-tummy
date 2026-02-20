@@ -4,9 +4,9 @@ import {
   InputField,
   TextareaField,
 } from "../../components/FormSections/FormSections";
+import { Button } from "../../components/UI/Button/Button";
 import type { BasketItem as BasketItemType } from "../../Provider/BasketProvider";
 import "./Checkout.scss";
-import { Button } from "../../components/UI/Button/Button";
 
 type CustomerInfoFormProps = {
   data: {
@@ -47,9 +47,9 @@ export const CustomerInfoForm = ({ data, setData }: CustomerInfoFormProps) => (
         }}
       />
     </div>
-    <div className="form-info">
-      <AiOutlineInfoCircle style={{ marginRight: "8px", color: "#007bff" }} />
-      Please note: payment is made by phone after confirmation of the order.
+    <div className="form-info info-text">
+      <AiOutlineInfoCircle className="info-icon" />
+      <p className="info-text-content"> payment is made by phone after confirmation of the order. </p>
     </div>
   </div>
 );

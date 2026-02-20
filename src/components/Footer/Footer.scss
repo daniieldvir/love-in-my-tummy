@@ -65,8 +65,12 @@
     &-content {
       display: flex;
       flex-direction: column;
-      align-items: center;
       gap: 40px;
+
+      .footer-contact,
+      .footer-brand {
+        padding-left: 10%;
+      }
     }
   }
 }

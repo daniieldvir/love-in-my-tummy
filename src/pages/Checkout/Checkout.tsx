@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/logo/logo.png";
 import { Button } from "../../components/UI/Button/Button";
 import { SuccessIcon } from "../../components/UI/SuccessIcon/SuccessIcon";
 import { useBasket } from "../../Provider/BasketProvider";
@@ -84,9 +83,6 @@ export const Checkout = () => {
 
   return (
     <div className="checkout-page">
-      <div className="checkout-header-logo">
-        <img src={logo} alt="logo" onClick={() => navigate("/")} />
-      </div>
       <div className="checkout-container">
         <form className="checkout-form" onSubmit={handlePlaceOrder}>
           <CustomerInfoForm data={customerInfo} setData={setCustomerInfo} />
