@@ -85,6 +85,19 @@
           display: inline-flex;
           align-items: center;
         }
+
+        .button.secondary.add-to-basket-btn {
+          background: var(--text-main);
+          color: var(--white);
+          padding: 8px 18px;
+          border-radius: 10px;
+          font-size: 0.9rem;
+          border: none;
+
+          &:hover {
+            background: var(--primary);
+          }
+        }
       }
     }
   }

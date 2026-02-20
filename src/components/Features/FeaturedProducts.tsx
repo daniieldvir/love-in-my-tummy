@@ -24,7 +24,8 @@ const FeaturedProducts = ({ products, onAddToBasket }: Props) => {
               <Button
                 text="Add to Basket"
                 type="button"
-                designType="add-to-basket"
+                designType="secondary"
+                className="add-to-basket-btn"
                 onClick={() => onAddToBasket(product)}
               />
             </div>

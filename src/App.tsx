@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { MainLayout } from "./layouts/MainLayout";
 import { About } from "./pages/About/About";
 import { Checkout } from "./pages/Checkout/Checkout";
@@ -7,9 +8,18 @@ import { Home } from "./pages/Home/Home";
 import { Products } from "./pages/Products/Products";
 import { BasketProvider } from "./Provider/BasketProvider";
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
 const App: React.FC = () => {
   return (
     <BasketProvider>
+      <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />

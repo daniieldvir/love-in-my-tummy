@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo/logo.png";
+import { Button } from "../../components/UI/Button/Button";
 import { SuccessIcon } from "../../components/UI/SuccessIcon/SuccessIcon";
 import { useBasket } from "../../Provider/BasketProvider";
 import "./Checkout.scss";
@@ -70,9 +71,13 @@ export const Checkout = () => {
           Thank you for placing your order! We will contact you by phone to
           confirm the details before processing it
         </p>
-        <Link to="/" className="back-home-btn">
-          Back to Home
-        </Link>
+        <Button
+          text="Back to Home"
+          type="button"
+          designType="secondary"
+          className="back-home-btn"
+          onClick={() => navigate("/")}
+        />
       </div>
     );
   }

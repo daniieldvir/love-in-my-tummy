@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useBasket } from "../../Provider/BasketProvider";
 import { BasketItem } from "./BasketItem/BasketItem";
 import "./ShoppingList.scss";
+import { Button } from "../UI/Button/Button";
 
 interface ShoppingListProps {
   isOpen: boolean;
@@ -57,16 +58,17 @@ export const ShoppingList = ({ isOpen, onClose }: ShoppingListProps) => {
             <span>Total Amount</span>
             <span className="total-price">${total.toFixed(2)}</span>
           </div>
-          <button
+          <Button
+            text="Checkout Now"
+            type="button"
+            designType="primary"
             className="checkout-btn"
-            disabled={basket.length === 0}
+            disabled={!basket.length}
             onClick={() => {
               onClose();
               navigate("/checkout");
             }}
-          >
-            Checkout Now
-          </button>
+          />
         </div>
       </div>
     </>,

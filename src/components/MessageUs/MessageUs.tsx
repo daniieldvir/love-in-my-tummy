@@ -8,6 +8,7 @@ import { Option } from "./Option";
 type Props = {
   submitted: boolean;
   formData: FormData;
+  isFormValid: boolean;
   setFormData: React.Dispatch<React.SetStateAction<FormData>>;
   handleSubmit: (e: React.FormEvent) => void;
   handleReset: () => void;
@@ -15,6 +16,7 @@ type Props = {
 export const MessageUs = ({
   submitted,
   formData,
+  isFormValid,
   setFormData,
   handleSubmit,
   handleReset,
@@ -74,6 +76,7 @@ export const MessageUs = ({
             className="submit-btn"
             designType="primary"
             onClick={(e) => handleSubmit(e)}
+            disabled={!isFormValid ? true : false}
           />
         </form>
       )}

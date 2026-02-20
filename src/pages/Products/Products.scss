@@ -38,23 +38,13 @@
   margin-bottom: 60px;
   flex-wrap: wrap;
 
-  .filter-btn {
+  .button.secondary.filter-btn {
     padding: 10px 25px;
-    border-radius: 30px;
     border: 1px solid var(--primary-light);
-    color: var(--primary-dark);
-    font-weight: 500;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background: rgba(141, 110, 99, 0.05);
-    }
 
     &.active {
       background: var(--primary);
       color: var(--white);
-      border-color: var(--primary);
-      box-shadow: 0 4px 12px rgba(141, 110, 99, 0.2);
     }
   }
 }

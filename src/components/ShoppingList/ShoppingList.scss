@@ -117,29 +117,15 @@
       }
     }
 
-    .checkout-btn {
+    .button.primary.checkout-btn {
       width: 100%;
       background: var(--grad-primary);
       color: var(--white);
-      padding: 16px;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      box-shadow: 0 4px 15px rgba(141, 110, 99, 0.3);
-
-      &:hover:not(:disabled) {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(141, 110, 99, 0.4);
-      }
-
-      &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-        filter: grayscale(1);
-      }
+      border-radius: 10px;
     }
   }
 }
+
 
 @keyframes fadeIn {
   from {

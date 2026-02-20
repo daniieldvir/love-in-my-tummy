@@ -6,6 +6,7 @@ import {
 } from "../../components/FormSections/FormSections";
 import type { BasketItem as BasketItemType } from "../../Provider/BasketProvider";
 import "./Checkout.scss";
+import { Button } from "../../components/UI/Button/Button";
 
 type CustomerInfoFormProps = {
   data: {
@@ -152,13 +153,13 @@ export const OrderSummary = ({
         <span>${total.toFixed(2)}</span>
       </div>
     </div>
-    <button
-      className="place-order-btn"
+    <Button
+      text="Complete Order"
       type="submit"
+      className="place-order-btn"
+      designType="primary"
       onClick={handlePlaceOrder}
       disabled={!isFormValid}
-    >
-      Complete Order
-    </button>
+    />
   </div>
 );

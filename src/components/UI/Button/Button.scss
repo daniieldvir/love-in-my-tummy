@@ -1,3 +1,18 @@
+.button {
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: auto;
+    filter: grayscale(1);
+
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
 .button.primary {
   display: inline-block;
   padding: 16px 42px;
@@ -7,7 +22,6 @@
   font-weight: 700;
   font-size: 1rem;
   border: none;
-  cursor: pointer;
   font-family: inherit;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
   transition: all 0.3s ease;
@@ -28,7 +42,6 @@
   display: inline-block;
   padding: 16px 42px;
   font-size: 1rem;
-  cursor: pointer;
   font-family: inherit;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
   transition: all 0.3s ease;
@@ -37,6 +50,8 @@
     transform: translateY(-3px);
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
   }
+
+
 }
 
 .button.tertiary {
@@ -49,18 +64,6 @@
   &:hover {
     background: var(--primary);
   }
+
 }
 
-.button.add-to-basket {
-  background: var(--text-main);
-  color: var(--white);
-  padding: 8px 18px;
-  border-radius: 10px;
-  font-weight: 500;
-  font-size: 0.9rem;
-
-  &:hover {
-    background: var(--primary);
-    transform: scale(1.05);
-  }
-}

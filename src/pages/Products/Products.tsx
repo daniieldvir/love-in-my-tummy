@@ -3,6 +3,7 @@ import FeaturedProducts from "../../components/Features/FeaturedProducts";
 import { products } from "../../constants/products.const.ts";
 import { useBasket } from "../../Provider/BasketProvider";
 import "./Products.scss";
+import { Button } from "../../components/UI/Button/Button.tsx";
 
 const CATEGORIES = [
   "All",
@@ -33,13 +34,14 @@ export const Products = () => {
       <section className="catalog container">
         <div className="filter-bar">
           {CATEGORIES.map((cat) => (
-            <button
+            <Button
+              type="button"
               key={cat}
+              text={cat}
+              designType="secondary"
               className={`filter-btn ${activeCategory === cat ? "active" : ""}`}
               onClick={() => setActiveCategory(cat)}
-            >
-              {cat}
-            </button>
+            />
           ))}
         </div>
 

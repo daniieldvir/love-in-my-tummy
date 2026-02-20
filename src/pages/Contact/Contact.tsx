@@ -16,8 +16,15 @@ export const Contact = () => {
     message: "",
   });
 
+  const canSubmit =
+    !!formData.name &&
+    !!formData.email &&
+    !!formData.subject &&
+    !!formData.message;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!canSubmit) return;
     setSubmitted(true);
   };
 
@@ -43,6 +50,7 @@ export const Contact = () => {
               setFormData={setFormData}
               handleSubmit={handleSubmit}
               handleReset={handleReset}
+              isFormValid={canSubmit}
             />
             <FrequentlyAsked />
           </div>
